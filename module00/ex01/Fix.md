@@ -4,3 +4,4 @@
 2. ตรวจสอบ Origin / Referer header
 3. ไม่ใช้ GET กับ action สำคัญ
 4. เพิ่ม confirmation step สำหรับธุรกรรม
+5. ทำ samesite cookie ข้อมูลจะต้องมาจาก site เดียวกัน

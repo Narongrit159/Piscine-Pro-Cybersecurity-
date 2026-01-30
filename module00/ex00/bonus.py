@@ -5,12 +5,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
 
-URL  = "http://192.168.109.131:8000/"
+URL  = "http://localhost:8000/"
 
 payloads = [
     "<b>test</b>",
     'document.getElementById("output").innerHTML = "<b>" + document.cookie + "</b>";',
-    "<img src=x onerror=alert(1)>",
+    'document.getElementById("output").innerHTML = "<b style="color:red;">" + window.location.href + "</b>"'
 ]
 
 driver = webdriver.Chrome() 

@@ -9,7 +9,6 @@
 ## ตัวอย่างการแก้ไข
 
 จาก:
-
 document.getElementById("output").innerHTML = userInput;
 
 แก้เป็น

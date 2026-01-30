@@ -2,7 +2,7 @@
 
 import requests
 
-url = "http://192.168.109.131:5000/render" 
+url = "http://localhost:5000/render" 
 
 
 payloads = {

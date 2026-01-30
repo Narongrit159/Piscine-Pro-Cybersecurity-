@@ -3,11 +3,11 @@
 import urllib.request
 import urllib.parse
 
-URL = "http://192.168.109.131:8080/"
+URL = "http://localhost:8080/"
 
 payloads = [
-    {"amount": "1000"},
-    {"amount": "500"},
+    {"amount": "100"},
+    {"amount": "100"},
 ]
 
 for p in payloads:
